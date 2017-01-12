@@ -1,0 +1,24 @@
+<div id="leftBarContainer">
+    <div class="row">
+        <div class="col-xs-12" id="leftBarHeader">
+            <div class="row">
+                <div class="col-xs-10">
+                    <small class="text-white m-l-xs">{{selectedRadio.name}}</small>
+                </div>
+                <div class="col-xs-2 pull-right">
+                    <span class="text-white">:</span>
+                </div>
+            </div>            
+        </div>
+        <div class="col-xs-12">
+            <div class="row">
+                <div class="col-xs-12">
+                    <radio-map></radio-map>
+                </div>
+                <div class="col-xs-12">
+                    <radio-list (selectedRadio$)="selectedRadioChange($event)"></radio-list>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>

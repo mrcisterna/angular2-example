@@ -1,0 +1,22 @@
+<ul class="nav nav-pills">
+    <li class="nav-item">
+        <a class="nav-link" routerLink="/dashboard" routerLinkActive="active">Dashboard</a>
+    </li>
+    <li class="nav-item dropdown" ngbDropdown>
+        <a class="nav-link dropdown-toggle" ngbDropdownToggle>Cruds</a>
+        <div class="dropdown-menu">
+            <a class="dropdown-item" routerLink="/users" routerLinkActive="active">Users</a>
+            <a class="dropdown-item" routerLink="/zones" routerLinkActive="active">Zones</a>
+            <a class="dropdown-item" routerLink="/radios" routerLinkActive="active">Radios</a>
+        </div>
+    </li>
+    <li class="nav-item">
+        <a class="nav-link" routerLink="/dashboard" routerLinkActive="active">Reports</a>
+    </li>
+    <li class="nav-item">
+        <a class="nav-link" routerLink="/dashboard" routerLinkActive="active">Settings</a>
+    </li>
+    <li class="nav-item">
+        <a class="nav-link" (click)="logout()" routerLinkActive="active">Logout</a>
+    </li>
+</ul>

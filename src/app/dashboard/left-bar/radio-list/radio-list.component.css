@@ -1,0 +1,17 @@
+#radioListContainer {
+    overflow-y: scroll;
+    overflow-x: hidden;
+    height: 60vh;
+    margin-top: 5px;
+}
+
+#radioSearch {
+    background-color: #909296;
+    padding-top: 3px;
+}
+
+#search {
+    height: 3vh;
+    padding-top: 3px;
+    padding-bottom: 3px;
+}

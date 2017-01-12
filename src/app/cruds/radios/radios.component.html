@@ -1,0 +1,58 @@
+<div class="row">
+    <div class="col-xs-6">
+        <button type="button" class="btn btn-primary" (click)="open(newRadioTemplate)">Add radio</button>
+    </div>
+    <div class="col-xs-12">
+        <ag-grid-ng2 #agGrid style="width: 100%; height: 300px;" class="ag-fresh"
+                     [gridOptions]="gridOptions">
+        </ag-grid-ng2>
+    </div>    
+</div>
+
+<template #newRadioTemplate let-c="close" let-d="dismiss">
+    <div class="modal-header">
+        <h4 class="modal-title">Add a new radio</h4>
+        <button type="button" class="close" aria-label="Close" (click)="d('Cross click')">
+            <span aria-hidden="true">&times;</span>
+        </button>
+    </div>
+    <div class="modal-body">
+        <div class="p-md">
+            <div class="row">
+                <div class="col-xs-12">
+                    <form class="form-validation" #userForm="ngForm">
+                        <div class="form-group">
+                            <label for="radioId">Radio Id</label>
+                            <input type="text" class="form-control" id="radioId" required [(ngModel)]="radio.radioId" name="radioId" #radioId="ngModel" autofocus>
+                            <div [hidden]="radioId.valid || radioId.pristine" class="alert alert-danger">
+                                Radio Id is required
+                            </div>
+                        </div>
+                        <div class="form-group">
+                            <label for="name">Name</label>
+                            <input type="text" class="form-control" id="name" required [(ngModel)]="radio.name" name="name" #name="ngModel">
+                            <div [hidden]="name.valid || name.pristine" class="alert alert-danger">
+                                Name is required
+                            </div>
+                        </div>
+                        <div class="form-group">
+                            <label for="radioType">Type</label>
+                            <select type="text" class="form-control" id="radioType" required [(ngModel)]="radio.radioTypeId" name="radioType" #radioType="ngModel">
+                                <option [value]="radioType.id" *ngFor="let radioType of radioTypes">{{radioType.name}}</option>
+                            </select>
+                            <div [hidden]="radioType.valid || radioType.pristine" class="alert alert-danger">
+                                Radio Type is required
+                            </div>
+                        </div>
+                    </form>
+                </div>
+            </div>
+        </div>
+    </div>
+    <div class="modal-footer">
+        <button type="button" class="btn btn-primary" (click)="save(radio)" [disabled]="userForm.invalid">Save</button>
+        <button type="button" class="btn btn-secondary" (click)="c('Close click')">Cancel</button>
+    </div>
+</template>
+
+<toaster-container></toaster-container>

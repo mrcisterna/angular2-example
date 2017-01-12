@@ -1,0 +1,10 @@
+#leftBarContainer {
+    height: 100vh;
+    overflow: hidden;
+    border: solid black 1px;
+    border-radius: 3px;
+}
+
+#leftBarHeader {
+    background-color: #909296;
+}

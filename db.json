@@ -1,0 +1,131 @@
+{
+  "radios": [
+    {
+      "id": 1,
+      "radioId": "1",
+      "name": "Radio 1"
+    },
+    {
+      "id": 2,
+      "radioId": "2",
+      "name": "Radio 2"
+    },
+    {
+      "id": 3,
+      "radioId": "3",
+      "name": "Radio 3"
+    },
+    {
+      "id": 4,
+      "radioId": "4",
+      "name": "Radio 4"
+    },
+    {
+      "id": 5,
+      "radioId": "5",
+      "name": "Radio 5"
+    },
+    {
+      "id": 6,
+      "radioId": "6",
+      "name": "Radio 6"
+    },
+    {
+      "radioId": "7",
+      "name": "test",
+      "id": 7
+    },
+    {
+      "radioId": "2",
+      "name": "test2",
+      "id": 8
+    },
+    {
+      "radioId": "8",
+      "name": "r8",
+      "id": 9
+    },
+    {
+      "radioId": "9",
+      "name": "radio 9",
+      "id": 10
+    },
+    {
+      "radioId": "10",
+      "name": "10",
+      "id": 11
+    },
+    {
+      "radioId": "11",
+      "name": "11",
+      "id": 12
+    },
+    {
+      "radioId": "12",
+      "name": "12",
+      "id": 13
+    },
+    {
+      "radioId": "13",
+      "name": "13",
+      "id": 14
+    },
+    {
+      "radioId": "55",
+      "name": "55",
+      "id": 15
+    },
+    {
+      "radioTypeId": "1",
+      "radioId": "6",
+      "name": "radio66",
+      "id": 16
+    },
+    {
+      "radioTypeId": "2",
+      "radioId": "7",
+      "name": "77",
+      "id": 17
+    },
+    {
+      "radioTypeId": "2",
+      "radioId": "7",
+      "name": "77",
+      "id": 18
+    },
+    {
+      "radioTypeId": "2",
+      "radioId": "7",
+      "name": "77",
+      "id": 19
+    },
+    {
+      "radioTypeId": "2",
+      "radioId": "9",
+      "name": "99",
+      "id": 20
+    }
+  ],
+  "users": [
+    {
+      "id": 1,
+      "username": "admin",
+      "password": "admin"
+    },
+    {
+      "id": 2,
+      "username": "operador",
+      "password": "123456"
+    }
+  ],
+  "radio-types": [
+    {
+      "id": 1,
+      "name": "Handy"
+    },
+    {
+      "id": 2,
+      "name": "Mobile"
+    }
+  ]
+}

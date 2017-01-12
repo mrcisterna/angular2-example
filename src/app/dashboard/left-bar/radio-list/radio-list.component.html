@@ -1,0 +1,17 @@
+<div id="radioListContainer">
+    <div class="row">
+        <div class="col-xs-12">
+            <div id="radioSearch">
+                <form class="form-inline">
+                    <div class="form-group">
+                        <label for="search" class="text-white">Buscar</label>
+                        <input type="text" class="form-control" id="search" name="search">
+                    </div>
+                </form>
+            </div>
+        </div>
+    </div>
+    <div *ngFor="let radio of radios">
+        <radio-card [radio]="radio" (click)="selectRadio(radio)"></radio-card>
+    </div>
+</div>

@@ -1,0 +1,30 @@
+<div class="container">
+    <div class="row">
+        <div class="col-lg-6 col-lg-3 offset-lg-3">
+            <div class="card card-container">
+                <img id="profile-img" class="profile-img-card" src="//ssl.gstatic.com/accounts/ui/avatar_2x.png" />
+                <p id="profile-name" class="profile-name-card"></p>
+                <div class="p-xs">
+                    <form name="formLogin" class="form-signin" (ngSubmit)="login()">
+                        <span id="reauth-email" class="reauth-email"></span>
+                        <input type="text" name="username" class="form-control" placeholder="User name" [(ngModel)]="credentials.username" required autofocus>
+                        <input type="password" name="password" class="form-control m-t-xs" placeholder="Password" [(ngModel)]="credentials.password" required>
+                        <div id="remember" class="checkbox">
+                            <label>
+                                <input type="checkbox" value="remember-me"> Remember me
+                            </label>
+                        </div>
+                        <button class="btn btn-lg btn-primary btn-block btn-signin" type="submit">Sign in</button>
+                    </form>
+                </div>
+
+                <a href="#" class="forgot-password m-l-xs">
+                    Forgot the password?
+                </a>
+            </div>
+            <div class="alert alert-danger" *ngIf="badLogin">
+                <span>Wrong username or password. Try again.</span>
+            </div>
+        </div>
+    </div>
+</div>
