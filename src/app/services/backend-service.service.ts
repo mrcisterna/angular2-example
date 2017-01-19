@@ -7,12 +7,15 @@ import 'rxjs/add/operator/debounceTime';
 import 'rxjs/add/operator/distinctUntilChanged';
 import 'rxjs/add/operator/map';
 import 'rxjs/add/operator/switchMap';
+import 'rxjs/add/operator/mergeMap';
 import 'rxjs/add/operator/toPromise';
 import 'rxjs/add/operator/multicast';
 import 'rxjs/add/operator/max';
 import 'rxjs/add/operator/scan';
 import 'rxjs/add/operator/toArray';
+
 import 'rxjs/add/observable/timer';
+import 'rxjs/add/observable/interval';
 
 
 

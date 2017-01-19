@@ -10,26 +10,22 @@ import { Radio } from '../../../classes/radio'
 export class RadioListComponent implements OnInit {
   
   radios: Radio[]
-  selectedRadio: Radio
+  selectedRadio: Radio = null
 
   @Output() selectedRadio$ = new EventEmitter()
 
   constructor(private radiosService: RadiosService) { }
 
-  ngOnInit() {
-    
-	if(!this.radiosService.radios){
-	  this.radiosService.radios$.subscribe({
+  ngOnInit() {   
+	
+	this.radiosService.radios$.subscribe({
 	    next: (radios) => {
           this.radios = radios
           this.radiosService.radios = radios
-		  this.selectedRadio = this.radios[0]
+		  if(!this.selectedRadio)
+		    this.selectRadio(this.radios[0])
         }
       })
-	}else{
-	  this.radios = this.radiosService.radios
-	  this.selectedRadio = this.radios[0]
-	}
   }
 
   selectRadio(radio: Radio): void{
